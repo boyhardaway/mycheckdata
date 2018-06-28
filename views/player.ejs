@@ -5,8 +5,8 @@
     </label> 
 </div>
 <div class="container">
-    <% for (let i in player.groups) { %> 
-        <h4><%= player.groups[i].name %></h4>  
+    <% for (let i in player.knockout) { %> 
+        <h4><%= player.knockout[i].name %></h4>  
         <table class="table table-secondary">
         <thead>
             <tr>
@@ -17,7 +17,7 @@
             </tr>
         </thead>
         <tbody>
-                <% player.groups[i].matches.forEach(match => { %>
+                <% player.knockout[i].matches.forEach(match => { %>
                     <tr>
                         <td scope="row" class="text-right">
                             <img src=<%= teams.filter(teams => teams.id === match.home_team)[0].flag %>  width="40" height="30"> 
