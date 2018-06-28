@@ -1,0 +1,40 @@
+<div class="container" style="color:indianred; text-align: center;">
+    <h5 style="color:indianred; text-align: center;">** เกมทายผลบอลโลกสร้างขึ้นเพื่อความบันเทิงจึงไม่สนับสนุนเล่นการพนัน **</h5>
+</div>
+
+<div class="container" style="color:darkolivegreen; text-align: center;">
+    <br> 
+    <label>
+        <h1>!!! World Cup 2018 !!!</h1>
+    </label> 
+</div>
+<div class="container">
+    <% for (let i in groups) { %> 
+        <h4><%= groups[i].name %></h4>  
+        <table class="table table-hover table-dark">
+        <thead>
+            <tr>
+                <th scope="col" class="text-right">HOME</th> 
+                <th scope="col" class="text-center">VS</th> 
+                <th scope="col" class="text-left">AWAY</th> 
+            </tr>
+        </thead>
+        <tbody>
+                <% groups[i].matches.forEach(match => { %>
+                    <tr>
+                        <td scope="row" class="text-right">
+                            <img src=<%= teams.filter(teams => teams.id === match.home_team)[0].flag %>  width="40" height="30"> 
+                            <%= teams.filter(teams => teams.id === match.home_team)[0].name %>
+                            <input type="number" class="number" min="0" max="99" required readonly value=<%= match.home_result%>> </td> 
+                        <td scope="row" class="text-center"> VS </td> 
+                        <td scope="row" class="text-left">
+                            <input type="number" class="number" min="0" max="99" required readonly value=<%= match.away_result%>>
+                            <%= teams.filter(teams => teams.id === match.away_team)[0].name %> 
+                            <img src=<%= teams.filter(teams => teams.id === match.away_team)[0].flag %> width="40" height="30"> </td> 
+                    </tr>
+                <% }) %>
+            </tbody>
+        </table>
+    <% } %>
+</div>
+    
