@@ -2155,7 +2155,7 @@
         }
         for (let i in knockout) {
             if (typeof (knockout[i]) == 'object' || typeof (knockout[i]) == 'array') {
-                if (i === 'matches' || i === 'round_16' || (i >= 0 && i <= 5)) {
+                if (i === 'matches' || i === 'round_16' || (i >= 6 && i <= 7)) {
                     newObj[i] = cloneObj(knockout[i])
                 }
             } else {
@@ -2189,9 +2189,9 @@
             // $('#myTable').append($(htmlTb))
 
             // let htmlD = '' 
-            console.log(data.knockout[i].name)
+            // console.log(data.knockout[i].name)
             let teamsData = data.teams
-            console.log(teamsData)
+            // console.log(teamsData)
             for (let j = 0; j < data.knockout[i].matches.length; j++) {
                 htmlTb += '<tr>'
                 for (let row in data.knockout[i].matches[j]) {
@@ -2218,7 +2218,6 @@
                         htmlTb += teamsData.filter(teamsData => teamsData.id === data.knockout[i].matches[j][row])[0].name +
                             '</td>'
                     }
- 
                 }
                 htmlTb += '</tr>'
             }
@@ -2228,7 +2227,6 @@
     }
 
     function funcExport(obj) {
- 
         saveText(JSON.stringify(obj), $("input#username").val() + ".json");
     }
 

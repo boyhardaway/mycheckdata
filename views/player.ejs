@@ -1,5 +1,6 @@
 <div class="container" style="color:#069; text-align: center;">
-    <br>
+        <h3 style="color:red; text-align: center;">** มี BUG ข้อมูล 2 คู่สุดท้ายหายไป วันจันทร์จะขอผลของ 2 คู่นี้ใหม่นะครับ</h3>
+ 
     <label>
         <h2><%= player.username %></h2><h4> Score!!! = <%= player.totalscore %></h4>
     </label> 
@@ -23,12 +24,14 @@
                             <td scope="row" class="text-right">
                                 <img src=<%= teams.filter(teams => teams.id === match.home_team)[0].flag %>  width="40" height="30"> 
                                 <%= teams.filter(teams => teams.id === match.home_team)[0].name %>
-                                <input type="number" class="number" min="0" max="99" required readonly value=<%= match.home_result%>> </td> 
+                                <input type="number" class="number" min="0" max="99" required readonly value=<%= match.home_result%>>                                
+                            </td> 
                             <td scope="row" class="text-center"> VS </td> 
                             <td scope="row" class="text-left">
                                 <input type="number" class="number" min="0" max="99" required readonly value=<%= match.away_result%>>
                                 <%= teams.filter(teams => teams.id === match.away_team)[0].name %> 
-                                <img src=<%= teams.filter(teams => teams.id === match.away_team)[0].flag %> width="40" height="30"> </td> 
+                                <img src=<%= teams.filter(teams => teams.id === match.away_team)[0].flag %> width="40" height="30"> 
+                            </td> 
                             <td scope="row" class="text-center"> <%= match.score%> </td>
                         </tr>
                     <% }) %>
