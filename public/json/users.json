@@ -1,6 +1,67 @@
-[{
+[
+  {
     "id": 1,
-    "name": "BoY",
+    "name": "aum_patchrapa",
     "color": "#008080"
+  },
+  {
+    "id": 2,
+    "name": "Cherub",
+    "color": "#2E86C1"
+  },
+  {
+    "id": 3,
+    "name": "Coco",
+    "color": "#7B241C"
+  },
+  {
+    "id": 4,
+    "name": "Coutinho",
+    "color": "#CD5C5C"
+  },
+  {
+    "id": 5,
+    "name": "FIFA",
+    "color": "#F4D03F"
+  },
+  {
+    "id": 6,
+    "name": "Lufang",
+    "color": "#C39BD3"
+  },
+  {
+    "id": 7,
+    "name": "Man",
+    "color": "#BFC9CA"
+  },
+  {
+    "id": 8,
+    "name": "Mourinho",
+    "color": "#AED6F1"
+  },
+  {
+    "id": 9,
+    "name": "Oct_27",
+    "color": "D98880"
+  },
+  {
+    "id": 10,
+    "name": "Panther",
+    "color": "#A9DFBF"
+  },
+  {
+    "id": 11,
+    "name": "T",
+    "color": "#FFA07A"
+  },
+  {
+    "id": 12,
+    "name": "WC",
+    "color": "#7D3C98"
+  },
+  {
+    "id": 13,
+    "name": "แชมป์ตกรอบแรก",
+    "color": "#9A7D0A"
   }
 ]
